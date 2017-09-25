@@ -14,7 +14,7 @@ class Roulette
     lines = File.open('roulette_history.txt', 'r').readlines
     numbers = lines.to_a.map(&:to_i)
     best = numbers.group_by(&:itself).values.max_by(&:size).first
-    puts "The best number to bet is #{best}."
+    puts "The best number to bet on is #{best}."
   end
 end
 
